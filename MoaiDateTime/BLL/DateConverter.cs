@@ -23,5 +23,11 @@ namespace MoaiDateTime.BLL
             int[] DateParameter = PersianDate.Split('/').Select(int.Parse).ToArray();
             return new DateTime(DateParameter[0], DateParameter[1], DateParameter[2], new PersianCalendar());
         }
+
+        internal static DateTime ChangeHijriDateToGeorgianDate(string HijriDate)
+        {
+            int[] DateParameter = HijriDate.Split('/').Select(int.Parse).ToArray();
+            return new DateTime(DateParameter[0], DateParameter[1], DateParameter[2], new HijriCalendar());
+        }
     }
 }

@@ -14,5 +14,10 @@ namespace MoaiDateTime
         {
             return DateConverter.ChangePersianDateToGeorgianDate(PersianDate);
         }
+
+        public static DateTime ConvertHijriDateToGeorgianDate(string HijriDate)
+        {
+            return DateConverter.ChangePersianDateToGeorgianDate(HijriDate);
+        }
     }
 }
