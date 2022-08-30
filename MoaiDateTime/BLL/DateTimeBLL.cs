@@ -5,7 +5,7 @@ namespace MoaiDateTime.BLL
 {
     internal static class DateTimeBLL
     {
-        internal static DateTime fncGetDateFromInternet()
+        internal static DateTime GetDateFromInternet()
         {
             Instant now = NetworkClock.Instance.GetCurrentInstant();
             DateTimeZone tz = DateTimeZoneProviders.Tzdb["Asia/Tehran"];
