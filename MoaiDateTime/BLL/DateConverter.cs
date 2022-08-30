@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Globalization;
+using System.Linq;
 
 namespace MoaiDateTime.BLL
 {
@@ -15,6 +16,12 @@ namespace MoaiDateTime.BLL
         {
             HijriCalendar HijriCal = new HijriCalendar();
             return string.Format("{0}/{1}/{2}", HijriCal.GetYear(DT), HijriCal.GetMonth(DT) < 10 ? "0" + HijriCal.GetMonth(DT).ToString() : HijriCal.GetMonth(DT).ToString(), HijriCal.GetDayOfMonth(DT) < 10 ? "0" + HijriCal.GetDayOfMonth(DT).ToString() : HijriCal.GetDayOfMonth(DT).ToString());
+        }
+
+        internal static DateTime ChangePersianDateToGeorgianDate(string PersianDate)
+        {
+            int[] DateParameter = PersianDate.Split('/').Select(int.Parse).ToArray();
+            return new DateTime(DateParameter[0], DateParameter[1], DateParameter[2], new PersianCalendar());
         }
     }
 }

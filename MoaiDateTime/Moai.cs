@@ -9,5 +9,10 @@ namespace MoaiDateTime
         {
             return DateTimeBLL.GetDateFromInternet();
         }
+
+        public static DateTime ConvertGeorgianDateToPersianDate(string PersianDate)
+        {
+            
+        }
     }
 }
