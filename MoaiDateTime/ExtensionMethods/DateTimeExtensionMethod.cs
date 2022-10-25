@@ -17,7 +17,12 @@ namespace MoaiDateTime.ExtensionMethods
         
         public static string ToHijriDateString(this DateTime dt)
         {
-            return DateConverter.ChangeGeorgianDateToStringPersianDate(dt);
+            return DateConverter.ChangeGeorgianDateToStringHijriDate(dt);
+        }
+        
+        public static string ToHijriDateAndTimeString(this DateTime dt)
+        {
+            return DateConverter.ChangeGeorgianDateToStringHijriDate(dt) + " - " + dt.ToShortTimeString();
         }
     }
 }
