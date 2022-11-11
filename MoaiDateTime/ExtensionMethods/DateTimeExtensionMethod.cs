@@ -5,6 +5,8 @@ namespace MoaiDateTime.ExtensionMethods
 {
     public static class DateTimeExtensionMethod
     {
+        public enum TimeDisplayFormat { TweneyFour , Twelve }
+
         public static string ToShamsiDateString(this DateTime dt)
         {
             return DateConverter.ChangeGeorgianDateToStringPersianDate(dt);
