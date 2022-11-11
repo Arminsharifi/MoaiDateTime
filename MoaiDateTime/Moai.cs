@@ -5,7 +5,7 @@ namespace MoaiDateTime
 {
     public static class Moai
     {
-        public static DateTime GetTehranDateTime()
+        public static DateTime GetDateTime()
         {
             return DateTimeBLL.GetDateFromInternet();
         }
